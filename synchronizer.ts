@@ -37,7 +37,11 @@ async function main() {
 
     const instance = createInstance(options);
 
+    console.log("Start fetching data");
     await instance.fetchMissedListings();
+    console.log("Finish fetching data");
+    client.close();
+    instance.close()
 }
 
 main();
