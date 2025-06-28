@@ -1,5 +1,6 @@
 import { createInstance } from 'daftar-properti-sync';
 import { DaftarPropertiSyncOptions } from 'daftar-properti-sync/.d.ts/interfaces';
+import { Listing } from 'daftar-properti-sync/.d.ts/types';
 import { MongoClient } from "mongodb";
 
 function getRequiredEnv(key: string): string {
@@ -20,7 +21,7 @@ async function main() {
 
     const client = new MongoClient(MONGO_URI);
     await client.connect();
-    const listingCollection = client.db(DB_DATABASE).collection(COLLECTION_NAME);
+    const listingCollection = client.db(DB_DATABASE).collection<Listing>(COLLECTION_NAME);
 
     const options : DaftarPropertiSyncOptions = {
         port: 8050,

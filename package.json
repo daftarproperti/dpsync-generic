@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "daftar-properti-sync": "git+https://github.com/daftarproperti/daftar-properti-sync.git#36c5d2c015582df8645accf04ab03b7969b1edab",
-    "mongodb": "^6.17.0"
+    "daftar-properti-sync": "git+https://github.com/daftarproperti/daftar-properti-sync.git#e344ed9309cf03110ae8ce5633eaa7576fa2699d",
+    "mongodb": "^4.17"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
